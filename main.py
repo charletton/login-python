@@ -69,13 +69,20 @@ def status(status_user):
     else:
         print('Logueado como {}'.format(status_user))
 
+# Funcion para mostrar usuarios
+def mostrar_usuarios():
+    print('Usuarios registrados: ')
+    for user in usuarios:
+        print(user, ' ')
+    return None
+
 #Algoritmo principal
 status_user = None
 menu = 0
 print('Bienvenido al loguin!')
 print('Opciones:')
-while menu != 4:
-    menu = int(input("1. Registrarse\n2. Loguearse\n3. Status\n4. Salir\n->"))
+while menu != 5:
+    menu = int(input("1. Registrarse\n2. Loguearse\n3. Status\n4. Ver usuarios\n 5. Salir\n->"))
     if menu == 1:
         registrarse()
     elif menu == 2:
@@ -83,6 +90,8 @@ while menu != 4:
     elif menu == 3:
         status(status_user)
     elif menu == 4:
+        mostrar_usuarios()
+    elif menu == 5:
         print('Hasta luego!')
     else:
         print('Opcion no valida')
